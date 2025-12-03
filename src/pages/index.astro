@@ -1,44 +1,54 @@
 ---
 import Layout from "../layouts/Base.astro";
 import Container from "../components/Container.astro";
+import SimpleNav from "../components/SimpleNav.astro";
 
 const seo = {
-  title: "Astro Minimal Starter",
-  description: "This is a starter repo for an blog built with Astro including open graph tags, canonical urls, RSS, sitemap support."
-  }
+  title: "Yongting You",
+};
 ---
 
-<Layout
-  seo={seo}
->
+<Layout seo={seo}>
   <Container>
-    <h1>Astro Minimal Starter</h1>
-    <p>
-      If you haven't heard about <a
-        href="https://astro.build"
-        target="_blank"
-        rel="noopener noreferrer">Astro</a
-      > yet you're missing out. This starter repo gives you a blog website with posts
-      written in Markdown, all powered by Astro.
-    </p>
+    <SimpleNav />
 
-    <p>
-      Don't be fooled by the simplicity of this starter either. With excellent
-      SEO built in, Astro's excellent developer environment, and performance
-      best practices you're getting one of the best foundations for a personal
-      blog with posts written in markdown. The reason for making such a bare
-      bones starter in terms of styles is that it has what you need out of the
-      box for SEO and site structure but it makes no assumptions about how you
-      want it look and behave.
-    </p>
+    <h1>Yongting You</h1>
+    <!-- <p>Minimal personal site and blog.</p> -->
 
-    <p>
-      Sometimes starters can feel like they are giving us way too much and
-      you'll spend a day picking apart half of the code to get to the setup you
-      actually wanted. Want to use vanilla CSS instead of Tailwind or Scss? No
-      problem!
-    </p>
-
-    <a href="/blog">Blog →</a>
+    <dl class="info">
+      <div class="row">
+        <dt>GitHub</dt>
+        <dd><a href="https://github.com/2010YOUY01" target="_blank" rel="noreferrer">github.com/2010YOUY01</a></dd>
+      </div>
+      <div class="row">
+        <dt>Email</dt>
+        <dd><a href="mailto:2010youy01@gmail.com">2010youy01@gmail.com</a></dd>
+      </div>
+    </dl>
   </Container>
 </Layout>
+
+<style>
+  h1 {
+    margin: 0.5rem 0 0.25rem 0;
+  }
+
+  .info {
+    margin: 1rem 0;
+  }
+
+  .row {
+    display: flex;
+    gap: 0.75rem;
+    padding: 0.4rem 0;
+  }
+
+  dt {
+    width: 70px;
+    font-weight: 600;
+  }
+
+  dd {
+    margin: 0;
+  }
+</style>
